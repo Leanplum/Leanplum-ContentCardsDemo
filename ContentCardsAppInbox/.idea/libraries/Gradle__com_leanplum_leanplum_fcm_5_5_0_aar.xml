@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.leanplum:leanplum-fcm:5.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12f397279df5fa64f6238af2b9565b4b/jetified-leanplum-fcm-5.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12f397279df5fa64f6238af2b9565b4b/jetified-leanplum-fcm-5.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12f397279df5fa64f6238af2b9565b4b/jetified-leanplum-fcm-5.5.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.leanplum/leanplum-fcm/5.5.0/236a8abcddc414b8e2db7e6b70d9455f7a02f083/leanplum-fcm-5.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.leanplum/leanplum-fcm/5.5.0/bed023ede38dade46b28c3e00224cb9790b3e5a6/leanplum-fcm-5.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
