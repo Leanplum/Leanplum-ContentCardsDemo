@@ -35,8 +35,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     //Leanplum
-    implementation 'com.leanplum:leanplum-fcm:5.5.0'
-    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.leanplum:leanplum-core:5.5.0'
+//    implementation 'com.google.firebase:firebase-messaging:21.0.1'
     //Carousel library
     implementation 'com.synnapps:carouselview:0.1.4'
 

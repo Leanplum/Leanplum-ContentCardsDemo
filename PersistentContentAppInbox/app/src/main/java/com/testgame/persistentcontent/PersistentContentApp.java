@@ -13,6 +13,7 @@ public class PersistentContentApp extends LeanplumApplication
     public void onCreate() {
         super.onCreate();
         Leanplum.setApplicationContext(this);
+        Leanplum.setLogLevel(4);
         LeanplumActivityHelper.enableLifecycleCallbacks(this);
         Leanplum.setAppIdForDevelopmentMode("app_8fM8YyCDJ8Pdut5hOzT8QX46WU7Ys5xjDiotdjOqgbE", "dev_tGxYGe7FztMpyaQlWm4v4U1cC7E98H9Gy0RilLPzWlQ");
         Leanplum.start(this);

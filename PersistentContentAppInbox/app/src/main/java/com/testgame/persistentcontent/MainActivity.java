@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Leanplum.getInbox().downloadMessages();
 //        Fetch inbox messages
         inbox = Leanplum.getInbox();
         List all = inbox.allMessages();
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             boolean hasImage = false;
 
             LeanplumInboxMessage message = inbox.messageForId(messageId);
-
+            Log.d("Danny", message.getDeliveryTimestamp().toString());
             //Set title and subtitle
             String title = message.getTitle();
             String subtitle = message.getSubtitle();

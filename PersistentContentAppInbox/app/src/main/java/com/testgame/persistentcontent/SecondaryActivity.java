@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -88,6 +89,7 @@ public class SecondaryActivity extends AppCompatActivity {
             //Check if there is any additional data
             if (message.getData() != null) {
                 JSONObject data = message.getData();
+                Log.d("Danny",message.getDeliveryTimestamp().toString());
                 Iterator<String> iter = data.keys();
                 cv = new CarouselView(this, null);
 
