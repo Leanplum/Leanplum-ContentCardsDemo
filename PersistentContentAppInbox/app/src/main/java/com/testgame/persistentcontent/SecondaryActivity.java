@@ -19,7 +19,7 @@ import com.leanplum.LeanplumInboxMessage;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-import com.testgame.contentcards.R;
+import com.testgame.persistentcontent.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -16,7 +16,7 @@ import com.leanplum.LeanplumInboxMessage;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-import com.testgame.contentcards.R;
+import com.testgame.persistentcontent.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         }// end for
-        // Check if the content card should render
+        // Check if the content should render
         if (show) {
             cv = new CarouselView(this, null);
             cv.setId(View.generateViewId());
