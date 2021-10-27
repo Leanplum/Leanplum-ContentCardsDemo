@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.testgame.contentcards"
+        applicationId "com.testgame.nativeContent"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1

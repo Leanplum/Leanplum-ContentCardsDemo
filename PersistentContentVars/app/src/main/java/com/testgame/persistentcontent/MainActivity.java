@@ -8,12 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.leanplum.Leanplum;
 import com.leanplum.Var;
+import com.leanplum.callbacks.VariablesChangedCallback;
 import com.leanplum.internal.FileManager;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-import com.testgame.contentcards.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,10 +29,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     //Constant for the context related to this activity
-    final private String context = "main_content_card";
+    final private String context = "main_content";
 
     // Variable declaration
-    public Var<HashMap<String, HashMap<String,String>>> contentCards = Var.define("content_cards", new HashMap<String, HashMap<String,String>>());
+    public Var<HashMap<String, HashMap<String,String>>> persistentContent = Var.define("persistent_content", new HashMap<String, HashMap<String,String>>());
 
     // HashMap which will contain only the images for this specific activity. In this case, they are recognized by context constant
     public HashMap<String, HashMap<String,String>> imageNames;
@@ -51,27 +52,31 @@ public class MainActivity extends AppCompatActivity {
         cv.setMinimumWidth(200);
         cv.setMinimumHeight(150);
         cv.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 500));
+        Leanplum.addVariablesChangedHandler(new VariablesChangedCallback() {
+            @Override
+            public void variablesChanged() {
 
-        imageNames = contentCards.value();
+            imageNames = persistentContent.value();
 
-        // Get all values for the given context
+            // Get all values for the given context
 
-        for(String value : imageNames.get(context).values()) {
-            if (value != null) {
-                FileManager.DownloadFileResult result = FileManager.maybeDownloadFile(false, value, null, null, null);
-                if (result != FileManager.DownloadFileResult.DOWNLOADING) {
-//                    setImage(value);
-                    // get the image Uris and add them to the carousel
-                    sampleImagesList.add(getImageFileUri(value).toString());
+            for(String value : imageNames.get(context).values()) {
+                if (value != null) {
+                    FileManager.DownloadFileResult result = FileManager.maybeDownloadFile(false, value, null, null, null);
+                    if (result != FileManager.DownloadFileResult.DOWNLOADING) {
+    //                    setImage(value);
+                        // get the image Uris and add them to the carousel
+                        sampleImagesList.add(getImageFileUri(value).toString());
+                    }
                 }
+
+                cv.setPageCount(sampleImagesList.size());
+                cv.setImageListener(imageListener);
+                cl.removeView(cv);
+                cl.addView(cv);
+            } // end for
             }
-
-            cv.setPageCount(sampleImagesList.size());
-            cv.setImageListener(imageListener);
-            cl.removeView(cv);
-            cl.addView(cv);
-        } // end for
-
+        });
 
     } // end onCreate
 

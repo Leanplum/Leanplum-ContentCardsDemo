@@ -1,4 +1,4 @@
-package com.testgame.contentcards;
+package com.testgame.persistentcontent;
 
 import org.junit.Test;
 

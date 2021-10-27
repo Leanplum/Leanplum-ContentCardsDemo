@@ -13,7 +13,6 @@ import com.leanplum.internal.FileManager;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-import com.testgame.contentcards.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,10 +26,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SecondaryActivity extends AppCompatActivity {
 
     //Constant for the context related to this activity
-    final private String context = "second_content_card";
+    final private String context = "second_content";
 
     // Variable declaration
-    public Var<HashMap<String, HashMap<String,String>>> contentCards = Var.define("content_cards", new HashMap<String, HashMap<String,String>>());
+    public Var<HashMap<String, HashMap<String,String>>> persistentContent = Var.define("persistent_content", new HashMap<String, HashMap<String,String>>());
 
     // HashMap which will contain only the images for this specific activity. In this case, they are recognized by context constant
     public HashMap<String, HashMap<String,String>> imageNames;
@@ -51,7 +50,7 @@ public class SecondaryActivity extends AppCompatActivity {
         cv.setMinimumHeight(150);
         cv.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 500));
 
-        imageNames = contentCards.value();
+        imageNames = persistentContent.value();
 
         // Get all values for the given context
 
