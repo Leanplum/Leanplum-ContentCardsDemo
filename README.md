@@ -15,6 +15,8 @@ main_content is the name of the subgroup of images which will be rendered in the
 
 second_content is the name of the subgroup of images which will be rendered in the secondary activity. 
 
+<img src="https://github.com/Leanplum/Leanplum-PersistentContentDemo/blob/master/vars_demo.png"/>
+
 ## Code implementation
 
 In this example, we are using a simple carousel library ( <a>https://github.com/sayyam/carouselview</a> )
