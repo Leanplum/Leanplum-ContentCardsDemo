@@ -5,6 +5,8 @@ You can instrument Leanplum variables to feed promotional content to your app’
 
 In the following example we will demonstrate how images can be added dynamically to a carousel view inside separate activities.
 
+# Variables DEMO
+
 ## Variable setup
 
 We will use a nested group variable i.e. persistent_content, which will allow us to create separate sub-groups that will carry the images for the carousel
