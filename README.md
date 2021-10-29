@@ -1,7 +1,7 @@
 # Leanplum-PersistentContentDemo
-Android Demo on how to use Leanplum Variables and App Inbox to create content cards
+Android Demo on how to use Leanplum Variables and App Inbox to create persistent content
 
-You can instrument Leanplum variables to feed promotional content to your app’s activity in the form of banners. You can A/B test these variables, segment them and roll out them to a gradually increasing portion of your user-base.
+You can instrument Leanplum variables to feed promotional content to your app’s activity in the form of banners. You can A/B test these variables, segment them and roll out them to a gradually increasing portion of your user-base. Or you can choose App Inbox implementation to take advantage of the out-of-the-box Campaigns functionalities.
 
 In the following example we will demonstrate how images can be added dynamically to a carousel view inside separate activities.
 
@@ -108,6 +108,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SecondaryActivity extends AppCompatActivity {
 
     //Constant for the context related to this activity
-    final private String context = "second_content_card";
+    final private String context = "second_content";
     
     ...
