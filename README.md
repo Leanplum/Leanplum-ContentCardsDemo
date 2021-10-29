@@ -5,6 +5,9 @@ You can instrument Leanplum variables to feed promotional content to your app’
 
 In the following example we will demonstrate how images can be added dynamically to a carousel view inside separate activities.
 
+1. AppInbox DEMO - [here](#app-inbox-demo)
+2. Variables DEMO - [here](#variables-demo)
+
 # App Inbox DEMO
 
 With the Leanplum App Inbox you can also insert content inside specific app activities to inform your users about new features or daily promotions. As this content is set through the Leanplum dashboard, you  can distribute it to specific audiences, measure engagement and control the content by using the out of the box features provided.
@@ -30,36 +33,11 @@ In this specific example we have a carousel which is rendered on one of the acti
 
 We have instrumented it in a couple of use cases:
 
-In the Main Activity we can add images into the carousel underneath the permanent content as separate images. All images in the carousel represent separate campaigns:
-
-## Campaigns used:
-
-Image 1 - https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1642395027/actions/1635135071/edit
-
-https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1619395050/actions/1638715066/edit
-
-https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1638685043/actions/1648305109/edit
-
- 
+In the Main Activity we can add images into the carousel underneath the permanent content by creating a new campaign, setting the correct context in the additional data. All images in the carousel represent separate campaigns.
 
 We can navigate on 2 other activities Bikes and Jerseys:
 
 In Both we have similar use-cases. We have a Carousel, where this time, all images are coming from a single campaign. Underneath, there is a static banner.
-
-## Campaigns Used:
-
-## BIKES:
-
-* <a>https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1619365185/actions/1619355200/edit</a>
-
-* <a>https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1627565095/actions/1625855146/edit</a>
-
-## JERSEYS
-
-* <a>https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1628695141/actions/1650055121/edit</a>
-
-* <a>https://dashboard-dot-leanplum.appspot.com/dashboard2/4540500222738432/composer/1636795082/actions/1638795014/edit</a>
-
  
 
 Code implementation - Android
